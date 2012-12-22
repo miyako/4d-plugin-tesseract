@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Deployment;
+		activeExecutable = D107D3981684ABC8009B21AF /* 4D v12.5 */;
+		activeTarget = 8D01CCC60486CAD60068D4B7 /* Tesseract */;
+		addToTargets = (
+			8D01CCC60486CAD60068D4B7 /* Tesseract */,
+		);
+		breakpoints = (
+			D1CA5A771684C0AA003455AB /* baseapi.cpp:213 */,
+		);
+		codeSenseManager = D19831F1156857B500C81EEF /* Code sense */;
+		executables = (
+			D107D3981684ABC8009B21AF /* 4D v12.5 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					390,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					502,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					516,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					462,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 377899785;
+			PBXWorkspaceStateSaveDate = 377899785;
+		};
+		perUserProjectItems = {
+			D107D34316848C53009B21AF /* PlistBookmark */ = D107D34316848C53009B21AF /* PlistBookmark */;
+			D107D38A1684ABA5009B21AF /* PBXTextBookmark */ = D107D38A1684ABA5009B21AF /* PBXTextBookmark */;
+			D107D3D81684ADF1009B21AF /* PBXTextBookmark */ = D107D3D81684ADF1009B21AF /* PBXTextBookmark */;
+			D13EFBE61684AE9F0042AC4C /* PBXTextBookmark */ = D13EFBE61684AE9F0042AC4C /* PBXTextBookmark */;
+			D1668B331684D68300456321 /* PBXTextBookmark */ = D1668B331684D68300456321 /* PBXTextBookmark */;
+			D172678915693637002515D3 /* PBXTextBookmark */ = D172678915693637002515D3 /* PBXTextBookmark */;
+			D172678A15693637002515D3 /* PBXTextBookmark */ = D172678A15693637002515D3 /* PBXTextBookmark */;
+			D172678B15693637002515D3 /* PBXTextBookmark */ = D172678B15693637002515D3 /* PBXTextBookmark */;
+			D17CF16116864AD50027BD78 /* PBXTextBookmark */ = D17CF16116864AD50027BD78 /* PBXTextBookmark */;
+			D1CA59F41684B78F003455AB /* PBXTextBookmark */ = D1CA59F41684B78F003455AB /* PBXTextBookmark */;
+			D1CA59F51684B78F003455AB /* PBXTextBookmark */ = D1CA59F51684B78F003455AB /* PBXTextBookmark */;
+			D1CA5B0D1684CC04003455AB /* PBXTextBookmark */ = D1CA5B0D1684CC04003455AB /* PBXTextBookmark */;
+			D1F8282F16864B4A004D1366 /* PBXTextBookmark */ = D1F8282F16864B4A004D1366 /* PBXTextBookmark */;
+			D1F8283016864B4A004D1366 /* PBXTextBookmark */ = D1F8283016864B4A004D1366 /* PBXTextBookmark */;
+			D1F8283216864B4A004D1366 /* PBXTextBookmark */ = D1F8283216864B4A004D1366 /* PBXTextBookmark */;
+		};
+		sourceControlManager = D19831F0156857B500C81EEF /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {879, 677}}";
+			sepNavSelRange = "{151, 0}";
+			sepNavVisRange = "{0, 190}";
+			sepNavWindowFrame = "{{61, 26}, {938, 805}}";
+		};
+	};
+	18B684F006944F2000CC6A1E /* 4DPluginAPI.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {788, 15405}}";
+			sepNavSelRange = "{456, 0}";
+			sepNavVisRange = "{0, 969}";
+			sepNavWindowFrame = "{{15, 82}, {847, 791}}";
+		};
+	};
+	18B684F206944F2000CC6A1E /* Flags.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {916, 720}}";
+			sepNavSelRange = "{338, 0}";
+			sepNavVisRange = "{72, 1220}";
+			sepNavWindowFrame = "{{485, -6}, {938, 805}}";
+		};
+	};
+	18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {948, 819}}";
+			sepNavSelRange = "{1036, 0}";
+			sepNavVisRange = "{297, 879}";
+			sepNavWindowFrame = "{{185, 41}, {1007, 800}}";
+		};
+	};
+	8D01CCC60486CAD60068D4B7 /* Tesseract */ = {
+		activeExec = 0;
+	};
+	8D01CCD10486CAD60068D4B7 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{84, 5}, {938, 805}}";
+		};
+	};
+	D107D33316848BBF009B21AF /* functions_tocr.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {665, 3614}}";
+			sepNavSelRange = "{5900, 0}";
+			sepNavVisRange = "{5692, 872}";
+			sepNavWindowFrame = "{{395, 77}, {871, 801}}";
+		};
+	};
+	D107D33416848BBF009B21AF /* functions_tocr.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {696, 695}}";
+			sepNavSelRange = "{330, 0}";
+			sepNavVisRange = "{0, 713}";
+			sepNavWindowFrame = "{{337, 4}, {755, 823}}";
+		};
+	};
+	D107D34316848C53009B21AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D01CCD10486CAD60068D4B7 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/miyako/Desktop/Tesseract/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	D107D38A1684ABA5009B21AF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D19CC17D1353782E0004336E /* C_TEXT.h */;
+		name = "C_TEXT.h: 37";
+		rLen = 14;
+		rLoc = 703;
+		rType = 0;
+		vrLen = 1050;
+		vrLoc = 120;
+	};
+	D107D3981684ABC8009B21AF /* 4D v12.5 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "ランナーを有効にする";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = D107D3991684ABC8009B21AF /* 4D.app */;
+		libgmallocEnabled = 0;
+		name = "4D v12.5";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	D107D3991684ABC8009B21AF /* 4D.app */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = 4D.app;
+		path = "/Applications/4D v12/12.5/4D.app";
+		sourceTree = "<absolute>";
+	};
+	D107D3D81684ADF1009B21AF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D19CC17C1353782E0004336E /* C_TEXT.cpp */;
+		name = "C_TEXT.cpp: 76";
+		rLen = 18;
+		rLoc = 1792;
+		rType = 0;
+		vrLen = 846;
+		vrLoc = 1977;
+	};
+	D120937E13534DCC00A72CAA /* 4DPlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {745, 699}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 0}";
+			sepNavWindowFrame = "{{555, 4}, {804, 827}}";
+		};
+	};
+	D13EFBE61684AE9F0042AC4C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D13EFBE71684AE9F0042AC4C /* allocator.h */;
+		name = "allocator.h: 97";
+		rLen = 0;
+		rLoc = 3335;
+		rType = 0;
+		vrLen = 1184;
+		vrLoc = 2712;
+	};
+	D13EFBE71684AE9F0042AC4C /* allocator.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = allocator.h;
+		path = "/Xcode3/SDKs/MacOSX10.5.sdk/usr/include/c++/4.2.1/bits/allocator.h";
+		sourceTree = "<absolute>";
+	};
+	D1668B331684D68300456321 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */;
+		name = "4DPlugin.cpp: 16";
+		rLen = 0;
+		rLoc = 377;
+		rType = 0;
+		vrLen = 725;
+		vrLoc = 451;
+	};
+	D172673E156931DA002515D3 /* pix.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = pix.h;
+		path = /Users/miyako/Desktop/tesseract/include/leptonica/pix.h;
+		sourceTree = "<absolute>";
+	};
+	D172678915693637002515D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D172673E156931DA002515D3 /* pix.h */;
+		name = "pix.h: 84";
+		rLen = 0;
+		rLoc = 2910;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 2665;
+	};
+	D172678A15693637002515D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D19CC1781353782E0004336E /* C_LONGINT.cpp */;
+		name = "C_LONGINT.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 188;
+		vrLoc = 0;
+	};
+	D172678B15693637002515D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D19CC1791353782E0004336E /* C_LONGINT.h */;
+		name = "C_LONGINT.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 156;
+		vrLoc = 0;
+	};
+	D17CF16116864AD50027BD78 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D107D33316848BBF009B21AF /* functions_tocr.cpp */;
+		name = "functions_tocr.cpp: 236";
+		rLen = 0;
+		rLoc = 5900;
+		rType = 0;
+		vrLen = 872;
+		vrLoc = 5692;
+	};
+	D17CF16D16864AD50027BD78 /* morph.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = morph.h;
+		path = /Users/miyako/Desktop/Tesseract/include/leptonica/morph.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {665, 2938}}";
+			sepNavSelRange = "{2977, 0}";
+			sepNavVisRange = "{2181, 1659}";
+			sepNavWindowFrame = "{{441, 21}, {650, 761}}";
+		};
+	};
+	D19831F0156857B500C81EEF /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	D19831F1156857B500C81EEF /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D19CC1781353782E0004336E /* C_LONGINT.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {665, 705}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 188}";
+		};
+	};
+	D19CC1791353782E0004336E /* C_LONGINT.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {665, 660}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 156}";
+		};
+	};
+	D19CC17C1353782E0004336E /* C_TEXT.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 2951}}";
+			sepNavSelRange = "{5411, 0}";
+			sepNavVisRange = "{4648, 1131}";
+			sepNavWindowFrame = "{{502, 4}, {938, 805}}";
+		};
+	};
+	D19CC17D1353782E0004336E /* C_TEXT.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {665, 949}}";
+			sepNavSelRange = "{703, 14}";
+			sepNavVisRange = "{120, 1050}";
+		};
+	};
+	D1CA59531684B2E7003455AB /* baseapi.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = baseapi.cpp;
+		path = "/Users/miyako/Downloads/tesseract-ocr/api/baseapi.cpp";
+		sourceTree = "<absolute>";
+	};
+	D1CA595D1684B2E7003455AB /* baseapi.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = baseapi.h;
+		path = /Users/miyako/Desktop/Tesseract/include/tesseract/baseapi.h;
+		sourceTree = "<absolute>";
+	};
+	D1CA59E41684B6E4003455AB /* allheaders.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = allheaders.h;
+		path = /Users/miyako/Desktop/Tesseract/include/leptonica/allheaders.h;
+		sourceTree = "<absolute>";
+	};
+	D1CA59F41684B78F003455AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D107D33416848BBF009B21AF /* functions_tocr.h */;
+		name = "functions_tocr.h: 17";
+		rLen = 0;
+		rLoc = 362;
+		rType = 0;
+		vrLen = 713;
+		vrLoc = 0;
+	};
+	D1CA59F51684B78F003455AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D1CA59E41684B6E4003455AB /* allheaders.h */;
+		name = "allheaders.h: 1206";
+		rLen = 48;
+		rLoc = 115275;
+		rType = 0;
+		vrLen = 3594;
+		vrLoc = 113087;
+	};
+	D1CA5A771684C0AA003455AB /* baseapi.cpp:213 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = D1CA59531684B2E7003455AB /* baseapi.cpp */;
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 213;
+		location = libtesseract.3.2.2.dylib;
+		modificationTime = 377804672.929129;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	D1CA5B0D1684CC04003455AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D1CA595D1684B2E7003455AB /* baseapi.h */;
+		name = "baseapi.h: 206";
+		rLen = 76;
+		rLoc = 7897;
+		rType = 0;
+		vrLen = 2055;
+		vrLoc = 17034;
+	};
+	D1F8282F16864B4A004D1366 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D17CF16D16864AD50027BD78 /* morph.h */;
+		name = "morph.h: 69";
+		rLen = 0;
+		rLoc = 2977;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 2181;
+	};
+	D1F8283016864B4A004D1366 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D1F8283116864B4A004D1366 /* config_auto.h */;
+		rLen = 0;
+		rLoc = 9223372036854775903;
+		rType = 0;
+	};
+	D1F8283116864B4A004D1366 /* config_auto.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = config_auto.h;
+		path = /Users/miyako/Desktop/Tesseract/include/leptonica/config_auto.h;
+		sourceTree = "<absolute>";
+	};
+	D1F8283216864B4A004D1366 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D1F8283316864B4A004D1366 /* config_auto.h */;
+		name = "config_auto.h: 33";
+		rLen = 0;
+		rLoc = 818;
+		rType = 0;
+		vrLen = 1031;
+		vrLoc = 0;
+	};
+	D1F8283316864B4A004D1366 /* config_auto.h */ = {
+		isa = PBXFileReference;
+		name = config_auto.h;
+		path = /Users/miyako/Desktop/Tesseract/include/leptonica/config_auto.h;
+		sourceTree = "<absolute>";
+	};
+}
