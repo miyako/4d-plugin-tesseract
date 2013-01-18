@@ -99,8 +99,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 380180244;
-			PBXWorkspaceStateSaveDate = 380180244;
+			PBXPerProjectTemplateStateSaveDate = 380202282;
+			PBXWorkspaceStateSaveDate = 380202282;
 		};
 		perUserProjectItems = {
 			D107D34316848C53009B21AF /* PlistBookmark */ = D107D34316848C53009B21AF /* PlistBookmark */;
@@ -159,9 +159,9 @@
 	};
 	D107D33316848BBF009B21AF /* functions_tocr.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {665, 3614}}";
-			sepNavSelRange = "{5900, 0}";
-			sepNavVisRange = "{5692, 872}";
+			sepNavIntBoundsRect = "{{0, 0}, {812, 3458}}";
+			sepNavSelRange = "{4216, 0}";
+			sepNavVisRange = "{3603, 1193}";
 			sepNavWindowFrame = "{{395, 77}, {871, 801}}";
 		};
 	};
@@ -319,7 +319,7 @@
 		fRef = D107D33316848BBF009B21AF /* functions_tocr.cpp */;
 		name = "functions_tocr.cpp: 236";
 		rLen = 0;
-		rLoc = 5900;
+		rLoc = 5898;
 		rType = 0;
 		vrLen = 872;
 		vrLoc = 5692;
@@ -396,9 +396,8 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 213;
-		location = libtesseract.3.2.2.dylib;
-		modificationTime = 377804672.929129;
+		modificationTime = 380202306.091276;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 }

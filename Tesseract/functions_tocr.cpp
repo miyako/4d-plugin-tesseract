@@ -160,10 +160,10 @@ void OCR_Read_image_text(sLONG_PTR *pResult, PackagePtr pParams)
 	OCRGetLangFolderPathString(datapath);
 	
 	const char *lang = NULL;
-		
+	CUTF8String language;
+	
 	if(Param3.getUTF16Length()) 
 	{
-		CUTF8String language;
 		Param3.copyUTF8String(&language);
 		lang = (const char *)language.c_str();
 	}

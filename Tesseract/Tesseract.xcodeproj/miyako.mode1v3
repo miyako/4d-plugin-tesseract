@@ -279,7 +279,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>40</integer>
+									<integer>2</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -349,14 +351,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {726, 570}}</string>
+								<string>{{0, 0}, {726, 568}}</string>
 								<key>RubberWindowFrame</key>
 								<string>381 108 934 675 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>570pt</string>
+							<string>568pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -369,14 +371,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 575}, {726, 59}}</string>
+								<string>{{0, 573}, {726, 61}}</string>
 								<key>RubberWindowFrame</key>
 								<string>381 108 934 675 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>59pt</string>
+							<string>61pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -395,9 +397,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D1BC81C616A9171C0075D2D2</string>
+				<string>D1F3A61116A96D4300C09321</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D1BC81C716A9171C0075D2D2</string>
+				<string>D1F3A61216A96D4300C09321</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -535,6 +537,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D1F3A61F16A96D4300C09321</string>
+		<string>D1F3A62016A96D4300C09321</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>D1F3A61316A96D4300C09321</string>
 		<string>D19831F8156857E900C81EEF</string>
 		<string>/Users/miyako/github-miyako/4d-plugin-tesseract/Tesseract/Tesseract.xcodeproj</string>
 	</array>
@@ -616,7 +623,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D19831F8156857E900C81EEF</string>
-				<string>D1BC81C816A9171C0075D2D2</string>
+				<string>D1F3A61616A96D4300C09321</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -738,13 +745,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D1668A6C1684D20700456321</string>
+				<string>D1F3A61716A96D4300C09321</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D1668A6D1684D20700456321</string>
-				<string>D1668A6E1684D20700456321</string>
-				<string>D1668A6F1684D20700456321</string>
-				<string>D1668A701684D20700456321</string>
-				<string>D1668A711684D20700456321</string>
+				<string>D1F3A61816A96D4300C09321</string>
+				<string>D1F3A61916A96D4300C09321</string>
+				<string>D1F3A61A16A96D4300C09321</string>
+				<string>D1F3A61B16A96D4300C09321</string>
+				<string>D1F3A61C16A96D4300C09321</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -898,7 +905,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D1668A721684D20700456321</string>
+				<string>D1F3A61D16A96D4300C09321</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
