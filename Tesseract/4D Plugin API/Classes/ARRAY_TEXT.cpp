@@ -83,14 +83,16 @@ void ARRAY_TEXT::toParamAtIndex(PackagePtr pParams, uint32_t index)
 void ARRAY_TEXT::convertFromUTF8(const CUTF8String* fromString, CUTF16String* toString)	
 {
 #ifdef _WIN32
-	int len = MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, (LPCSTR)fromString->c_str(), fromString->length(), NULL, 0);
+	int len = MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)fromString->c_str(), fromString->length(), NULL, 0);
 	
 	if(len){
 		std::vector<uint8_t> buf((len + 1) * sizeof(PA_Unichar));
-		if(MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, (LPCSTR)fromString->c_str(), fromString->length(), (LPWSTR)&buf[0], len)){
+		if(MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)fromString->c_str(), fromString->length(), (LPWSTR)&buf[0], len)){
 			*toString = CUTF16String((const PA_Unichar *)&buf[0]);
 		}
-    }
+    }else{
+			*toString = CUTF16String((const PA_Unichar *)L"");
+	}
            
 #else
            CFStringRef str = CFStringCreateWithBytes(kCFAllocatorDefault, fromString->c_str(), fromString->length(), kCFStringEncodingUTF8, true);
@@ -107,13 +109,15 @@ void ARRAY_TEXT::convertFromUTF8(const CUTF8String* fromString, CUTF16String* to
 void ARRAY_TEXT::convertToUTF8(const CUTF16String* fromString, CUTF8String* toString)
 {
 #ifdef _WIN32
-	int len = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, (LPCWSTR)fromString->c_str(), fromString->length(), NULL, 0, NULL, NULL);
+	int len = WideCharToMultiByte(CP_UTF8, 0, (LPCWSTR)fromString->c_str(), fromString->length(), NULL, 0, NULL, NULL);
 	
 	if(len){
 		std::vector<uint8_t> buf(len + 1);
-		if(WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, (LPCWSTR)fromString->c_str(), fromString->length(), (LPSTR)&buf[0], len, NULL, NULL)){
+		if(WideCharToMultiByte(CP_UTF8, 0, (LPCWSTR)fromString->c_str(), fromString->length(), (LPSTR)&buf[0], len, NULL, NULL)){
 			*toString = CUTF8String((const uint8_t *)&buf[0]);
 		}
+	}else{
+			*toString = CUTF8String((const uint8_t *)"");
 	}
            
 #else

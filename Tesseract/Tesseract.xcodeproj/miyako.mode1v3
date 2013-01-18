@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -271,14 +273,13 @@
 								<string>089C1671FE841209C02AAC07</string>
 								<string>D1726780156934C0002515D3</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>40</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -312,8 +313,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -328,13 +327,8 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>config_auto.h</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>D1F8283216864B4A004D1366</string>
 										<key>history</key>
 										<array>
-											<string>D172678915693637002515D3</string>
 											<string>D172678A15693637002515D3</string>
 											<string>D172678B15693637002515D3</string>
 											<string>D107D34316848C53009B21AF</string>
@@ -342,12 +336,8 @@
 											<string>D107D3D81684ADF1009B21AF</string>
 											<string>D13EFBE61684AE9F0042AC4C</string>
 											<string>D1CA59F41684B78F003455AB</string>
-											<string>D1CA59F51684B78F003455AB</string>
-											<string>D1CA5B0D1684CC04003455AB</string>
 											<string>D1668B331684D68300456321</string>
 											<string>D17CF16116864AD50027BD78</string>
-											<string>D1F8282F16864B4A004D1366</string>
-											<string>D1F8283016864B4A004D1366</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -359,14 +349,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {726, 574}}</string>
+								<string>{{0, 0}, {726, 570}}</string>
 								<key>RubberWindowFrame</key>
 								<string>381 108 934 675 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>574pt</string>
+							<string>570pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -379,14 +369,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 579}, {726, 55}}</string>
+								<string>{{0, 575}, {726, 59}}</string>
 								<key>RubberWindowFrame</key>
 								<string>381 108 934 675 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>55pt</string>
+							<string>59pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -405,9 +395,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D1F8282A16864B11004D1366</string>
+				<string>D1BC81C616A9171C0075D2D2</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D1F8282B16864B11004D1366</string>
+				<string>D1BC81C716A9171C0075D2D2</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -546,7 +536,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D19831F8156857E900C81EEF</string>
-		<string>/Users/miyako/Desktop/Tesseract/Tesseract.xcodeproj</string>
+		<string>/Users/miyako/github-miyako/4d-plugin-tesseract/Tesseract/Tesseract.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>381 108 934 675 0 0 1440 878 </string>
@@ -626,7 +616,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D19831F8156857E900C81EEF</string>
-				<string>D1F8282C16864B11004D1366</string>
+				<string>D1BC81C816A9171C0075D2D2</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -844,8 +834,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>D1CA5A031684B78F003455AB</string>
-				<string>D1CA5A041684B78F003455AB</string>
+				<string>D14755AB16A7D67D0071B77D</string>
+				<string>D14755AC16A7D67D0071B77D</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>
@@ -854,7 +844,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

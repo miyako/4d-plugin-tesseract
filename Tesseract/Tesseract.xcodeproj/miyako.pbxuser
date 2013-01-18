@@ -15,6 +15,20 @@
 			D107D3981684ABC8009B21AF /* 4D v12.5 */,
 		);
 		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					312,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
@@ -85,8 +99,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 377899785;
-			PBXWorkspaceStateSaveDate = 377899785;
+			PBXPerProjectTemplateStateSaveDate = 380180244;
+			PBXWorkspaceStateSaveDate = 380180244;
 		};
 		perUserProjectItems = {
 			D107D34316848C53009B21AF /* PlistBookmark */ = D107D34316848C53009B21AF /* PlistBookmark */;
@@ -94,16 +108,10 @@
 			D107D3D81684ADF1009B21AF /* PBXTextBookmark */ = D107D3D81684ADF1009B21AF /* PBXTextBookmark */;
 			D13EFBE61684AE9F0042AC4C /* PBXTextBookmark */ = D13EFBE61684AE9F0042AC4C /* PBXTextBookmark */;
 			D1668B331684D68300456321 /* PBXTextBookmark */ = D1668B331684D68300456321 /* PBXTextBookmark */;
-			D172678915693637002515D3 /* PBXTextBookmark */ = D172678915693637002515D3 /* PBXTextBookmark */;
 			D172678A15693637002515D3 /* PBXTextBookmark */ = D172678A15693637002515D3 /* PBXTextBookmark */;
 			D172678B15693637002515D3 /* PBXTextBookmark */ = D172678B15693637002515D3 /* PBXTextBookmark */;
 			D17CF16116864AD50027BD78 /* PBXTextBookmark */ = D17CF16116864AD50027BD78 /* PBXTextBookmark */;
 			D1CA59F41684B78F003455AB /* PBXTextBookmark */ = D1CA59F41684B78F003455AB /* PBXTextBookmark */;
-			D1CA59F51684B78F003455AB /* PBXTextBookmark */ = D1CA59F51684B78F003455AB /* PBXTextBookmark */;
-			D1CA5B0D1684CC04003455AB /* PBXTextBookmark */ = D1CA5B0D1684CC04003455AB /* PBXTextBookmark */;
-			D1F8282F16864B4A004D1366 /* PBXTextBookmark */ = D1F8282F16864B4A004D1366 /* PBXTextBookmark */;
-			D1F8283016864B4A004D1366 /* PBXTextBookmark */ = D1F8283016864B4A004D1366 /* PBXTextBookmark */;
-			D1F8283216864B4A004D1366 /* PBXTextBookmark */ = D1F8283216864B4A004D1366 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D19831F0156857B500C81EEF /* Source Control */;
 		userBuildSettings = {
@@ -286,23 +294,6 @@
 		vrLen = 725;
 		vrLoc = 451;
 	};
-	D172673E156931DA002515D3 /* pix.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = pix.h;
-		path = /Users/miyako/Desktop/tesseract/include/leptonica/pix.h;
-		sourceTree = "<absolute>";
-	};
-	D172678915693637002515D3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D172673E156931DA002515D3 /* pix.h */;
-		name = "pix.h: 84";
-		rLen = 0;
-		rLoc = 2910;
-		rType = 0;
-		vrLen = 869;
-		vrLoc = 2665;
-	};
 	D172678A15693637002515D3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D19CC1781353782E0004336E /* C_LONGINT.cpp */;
@@ -332,19 +323,6 @@
 		rType = 0;
 		vrLen = 872;
 		vrLoc = 5692;
-	};
-	D17CF16D16864AD50027BD78 /* morph.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = morph.h;
-		path = /Users/miyako/Desktop/Tesseract/include/leptonica/morph.h;
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {665, 2938}}";
-			sepNavSelRange = "{2977, 0}";
-			sepNavVisRange = "{2181, 1659}";
-			sepNavWindowFrame = "{{441, 21}, {650, 761}}";
-		};
 	};
 	D19831F0156857B500C81EEF /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -396,20 +374,6 @@
 		path = "/Users/miyako/Downloads/tesseract-ocr/api/baseapi.cpp";
 		sourceTree = "<absolute>";
 	};
-	D1CA595D1684B2E7003455AB /* baseapi.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = baseapi.h;
-		path = /Users/miyako/Desktop/Tesseract/include/tesseract/baseapi.h;
-		sourceTree = "<absolute>";
-	};
-	D1CA59E41684B6E4003455AB /* allheaders.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = allheaders.h;
-		path = /Users/miyako/Desktop/Tesseract/include/leptonica/allheaders.h;
-		sourceTree = "<absolute>";
-	};
 	D1CA59F41684B78F003455AB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D107D33416848BBF009B21AF /* functions_tocr.h */;
@@ -419,16 +383,6 @@
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 0;
-	};
-	D1CA59F51684B78F003455AB /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D1CA59E41684B6E4003455AB /* allheaders.h */;
-		name = "allheaders.h: 1206";
-		rLen = 48;
-		rLoc = 115275;
-		rType = 0;
-		vrLen = 3594;
-		vrLoc = 113087;
 	};
 	D1CA5A771684C0AA003455AB /* baseapi.cpp:213 */ = {
 		isa = PBXFileBreakpoint;
@@ -446,55 +400,5 @@
 		modificationTime = 377804672.929129;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
-	};
-	D1CA5B0D1684CC04003455AB /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D1CA595D1684B2E7003455AB /* baseapi.h */;
-		name = "baseapi.h: 206";
-		rLen = 76;
-		rLoc = 7897;
-		rType = 0;
-		vrLen = 2055;
-		vrLoc = 17034;
-	};
-	D1F8282F16864B4A004D1366 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D17CF16D16864AD50027BD78 /* morph.h */;
-		name = "morph.h: 69";
-		rLen = 0;
-		rLoc = 2977;
-		rType = 0;
-		vrLen = 1659;
-		vrLoc = 2181;
-	};
-	D1F8283016864B4A004D1366 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D1F8283116864B4A004D1366 /* config_auto.h */;
-		rLen = 0;
-		rLoc = 9223372036854775903;
-		rType = 0;
-	};
-	D1F8283116864B4A004D1366 /* config_auto.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = config_auto.h;
-		path = /Users/miyako/Desktop/Tesseract/include/leptonica/config_auto.h;
-		sourceTree = "<absolute>";
-	};
-	D1F8283216864B4A004D1366 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D1F8283316864B4A004D1366 /* config_auto.h */;
-		name = "config_auto.h: 33";
-		rLen = 0;
-		rLoc = 818;
-		rType = 0;
-		vrLen = 1031;
-		vrLoc = 0;
-	};
-	D1F8283316864B4A004D1366 /* config_auto.h */ = {
-		isa = PBXFileReference;
-		name = config_auto.h;
-		path = /Users/miyako/Desktop/Tesseract/include/leptonica/config_auto.h;
-		sourceTree = "<absolute>";
 	};
 }
