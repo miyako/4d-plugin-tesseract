@@ -518,7 +518,8 @@ class TESS_API TessBaseAPI {
    * as UTF8 and must be freed with the delete [] operator.
    */
   char* GetUTF8Text();
-
+  char* GetUTF8Text(void (*_PA_YieldAbsolute)(void));
+	
   /**
    * Make a HTML-formatted string with hOCR markup from the internal
    * data structures.

@@ -169,7 +169,8 @@ void OCR_Read_image_text(sLONG_PTR *pResult, PackagePtr pParams)
 	}
 		
 	tesseract::TessBaseAPI api;
-
+	void (*_PA_YieldAbsolute)(void) = PA_YieldAbsolute;
+	
 	api.SetPageSegMode(tesseract::PSM_AUTO_OSD);	
 
 	PIX *pixs = 0;
@@ -187,11 +188,12 @@ void OCR_Read_image_text(sLONG_PTR *pResult, PackagePtr pParams)
 		if(fin)
 		{
 			fclose(fin);
-	
+			
 			if(pixs)
 			{
 				api.SetImage(pixs);
-				char* outText = api.GetUTF8Text();
+				//char* outText = api.GetUTF8Text();
+				char* outText = api.GetUTF8Text(_PA_YieldAbsolute);				
 				
 				if (outText)
 				{

@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>D1E42C0816C0942700EF7D88</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>4DPlugin.cpp</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>D1E42C0916C0942700EF7D88</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>4DPlugin.cpp</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>D1E42C3216C094E400EF7D88</string>
+						<key>history</key>
+						<array>
+							<string>D1E42C0A16C0942700EF7D88</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {829, 635}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>61 155 829 676 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -279,7 +320,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>12</integer>
+									<integer>6</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -304,7 +346,7 @@
 							<real>201</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>381 108 934 675 0 0 1440 878 </string>
+						<string>297 137 934 675 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -320,7 +362,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>config_auto.h</string>
+								<string>4DPluginAPI.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,7 +370,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>config_auto.h</string>
+										<string>4DPluginAPI.cpp</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>D1E42C3116C094E400EF7D88</string>
 										<key>history</key>
 										<array>
 											<string>D172678A15693637002515D3</string>
@@ -339,7 +385,8 @@
 											<string>D13EFBE61684AE9F0042AC4C</string>
 											<string>D1CA59F41684B78F003455AB</string>
 											<string>D1668B331684D68300456321</string>
-											<string>D17CF16116864AD50027BD78</string>
+											<string>D1E42C0016C0942700EF7D88</string>
+											<string>D1E42C0116C0942700EF7D88</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -351,14 +398,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {726, 566}}</string>
+								<string>{{0, 0}, {726, 564}}</string>
 								<key>RubberWindowFrame</key>
-								<string>381 108 934 675 0 0 1440 878 </string>
+								<string>297 137 934 675 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>566pt</string>
+							<string>564pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -371,14 +418,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 571}, {726, 63}}</string>
+								<string>{{0, 569}, {726, 65}}</string>
 								<key>RubberWindowFrame</key>
-								<string>381 108 934 675 0 0 1440 878 </string>
+								<string>297 137 934 675 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>63pt</string>
+							<string>65pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -397,9 +444,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D1C4DBBF16B18AE1003A4A45</string>
+				<string>D1E42BF316C093D600EF7D88</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D1C4DBC016B18AE1003A4A45</string>
+				<string>D1E42BF416C093D600EF7D88</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -537,12 +584,16 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D1C4DBC216B18AE1003A4A45</string>
+		<string>D1E42C1616C0942700EF7D88</string>
+		<string>D1E42C1716C0942700EF7D88</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D19831F8156857E900C81EEF</string>
+		<string>D1E42C0816C0942700EF7D88</string>
 		<string>/Users/miyako/github-miyako/4d-plugin-tesseract/Tesseract/Tesseract.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>381 108 934 675 0 0 1440 878 </string>
+	<string>297 137 934 675 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -619,7 +670,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D19831F8156857E900C81EEF</string>
-				<string>D1C4DBC116B18AE1003A4A45</string>
+				<string>D1E42BF816C093D600EF7D88</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -741,13 +792,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D1F3A61716A96D4300C09321</string>
+				<string>D1E42C0E16C0942700EF7D88</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D1F3A61816A96D4300C09321</string>
-				<string>D1F3A61916A96D4300C09321</string>
-				<string>D1F3A61A16A96D4300C09321</string>
-				<string>D1F3A61B16A96D4300C09321</string>
-				<string>D1F3A61C16A96D4300C09321</string>
+				<string>D1E42C0F16C0942700EF7D88</string>
+				<string>D1E42C1016C0942700EF7D88</string>
+				<string>D1E42C1116C0942700EF7D88</string>
+				<string>D1E42C1216C0942700EF7D88</string>
+				<string>D1E42C1316C0942700EF7D88</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -901,7 +952,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D1F3A61D16A96D4300C09321</string>
+				<string>D1E42C1416C0942700EF7D88</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
