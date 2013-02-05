@@ -449,7 +449,7 @@ class TESS_API TessBaseAPI {
    * After Recognize, the output is kept internally until the next SetImage.
    */
   int Recognize(ETEXT_DESC* monitor);
-
+  int Recognize(ETEXT_DESC* monitor, void (*_PA_YieldAbsolute)(void));
   /**
    * Methods to retrieve information after SetAndThresholdImage(),
    * Recognize() or TesseractRect(). (Recognize is called implicitly if needed.)
@@ -519,7 +519,6 @@ class TESS_API TessBaseAPI {
    */
   char* GetUTF8Text();
   char* GetUTF8Text(void (*_PA_YieldAbsolute)(void));
-	
   /**
    * Make a HTML-formatted string with hOCR markup from the internal
    * data structures.
@@ -739,7 +738,7 @@ class TESS_API TessBaseAPI {
 
   //// paragraphs.cpp ////////////////////////////////////////////////////
   TESS_LOCAL void DetectParagraphs(bool after_text_recognition);
-
+  TESS_LOCAL void DetectParagraphs(bool after_text_recognition, void (*_PA_YieldAbsolute)(void));
   /**
    * Extract the OCR results, costs (penalty points for uncertainty),
    * and the bounding boxes of the characters.

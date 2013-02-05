@@ -88,7 +88,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    * object at the given level. Use delete [] to free after use.
   */
   virtual char* GetUTF8Text(PageIteratorLevel level) const;
-
+  virtual char* GetUTF8Text(PageIteratorLevel level, void (*_PA_YieldAbsolute)(void)) const;
   /**
    * Return whether the current paragraph's dominant reading direction
    * is left-to-right (as opposed to right-to-left).
@@ -199,7 +199,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
 
   /** Appends the current word in reading order to the given buffer.*/
   void AppendUTF8WordText(STRING *text) const;
-
+  void AppendUTF8WordText(STRING *text, void (*_PA_YieldAbsolute)(void)) const;
   /**
    * Appends the text of the current text line, *assuming this iterator is
    * positioned at the beginning of the text line*  This function
@@ -208,7 +208,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    * If the textline ends a paragraph, it gets a second terminal newline.
    */
   void IterateAndAppendUTF8TextlineText(STRING *text);
-
+  void IterateAndAppendUTF8TextlineText(STRING *text, void (*_PA_YieldAbsolute)(void));
   /**
    * Appends the text of the current paragraph in reading order
    * to the given buffer.
@@ -216,7 +216,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    * paragraph gets an extra newline at the end.
    */
   void AppendUTF8ParagraphText(STRING *text) const;
-
+  void AppendUTF8ParagraphText(STRING *text, void (*_PA_YieldAbsolute)(void)) const;
   /** Returns whether the bidi_debug flag is set to at least min_level. */
   bool BidiDebug(int min_level) const;
 
