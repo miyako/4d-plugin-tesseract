@@ -1,8 +1,4 @@
 
-.DS_Store
+*.DS_Store
 
-Tesseract/.DS_Store
-
-Tesseract/4D Plugin API/.DS_Store
-
-Tesseract/4D Plugin API/Classes/.DS_Store
+*.suo
