@@ -21,6 +21,6 @@ OCR Read image text
 OCR Get language folder
 ```
 
-You can support more languages by adding files from [https://github.com/tesseract-ocr/langdata].
+You can support more languages by adding files from (https://github.com/tesseract-ocr/langdata).
 
 
