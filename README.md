@@ -14,9 +14,13 @@ Commands
 
 ```c
 // --- OCR
-OCR_Set_language_folder
-OCR_Get_timeout
-OCR_SET_TIMEOUT
-OCR_Read_image_text
-OCR_Get_language_folder
+OCR Set language folder
+OCR Get timeout
+OCR SET TIMEOUT
+OCR Read image text
+OCR Get language folder
 ```
+
+You can support more languages by adding files from [https://github.com/tesseract-ocr/langdata].
+
+
