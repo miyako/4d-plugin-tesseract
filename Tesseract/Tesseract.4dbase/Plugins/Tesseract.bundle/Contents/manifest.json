@@ -1,0 +1,1 @@
+﻿{"name":"Tesseract","id":20000,"commands":[{"theme":"OCR","syntax":"OCR Set language folder(&T):L"},{"theme":"OCR","syntax":"OCR Get timeout:L"},{"theme":"OCR","syntax":"OCR SET TIMEOUT(&L)"},{"theme":"OCR","syntax":"OCR Read image text(&T;&T;&T):L"},{"theme":"OCR","syntax":"OCR Get language folder:T"}]}
