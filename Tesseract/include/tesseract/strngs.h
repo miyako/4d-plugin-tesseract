@@ -25,10 +25,6 @@
 #include          "platform.h"
 #include          "memry.h"
 
-namespace tesseract {
-class TFile;
-}  // namespace tesseract.
-
 // STRING_IS_PROTECTED means that  string[index] = X is invalid
 // because you have to go through strings interface to modify it.
 // This allows the string to ensure internal integrity and maintain
@@ -47,7 +43,6 @@ class TESS_API STRING
     STRING();
     STRING(const STRING &string);
     STRING(const char *string);
-    STRING(const char *data, int length);
     ~STRING ();
 
     // Writes to the given file. Returns false in case of error.
@@ -55,17 +50,11 @@ class TESS_API STRING
     // Reads from the given file. Returns false in case of error.
     // If swap is true, assumes a big/little-endian swap is needed.
     bool DeSerialize(bool swap, FILE* fp);
-    // Writes to the given file. Returns false in case of error.
-    bool Serialize(tesseract::TFile* fp) const;
-    // Reads from the given file. Returns false in case of error.
-    // If swap is true, assumes a big/little-endian swap is needed.
-    bool DeSerialize(bool swap, tesseract::TFile* fp);
 
     BOOL8 contains(const char c) const;
     inT32 length() const;
     inT32 size() const { return length(); }
     const char *string() const;
-    const char *c_str() const;
 
     inline char* strdup() const {
      inT32 len = length() + 1;
@@ -105,10 +94,8 @@ class TESS_API STRING
     // be ambiguous, and ints usually need a string before or between them
     // anyway.
     void add_str_int(const char* str, int number);
-    // Appends the given string and double (as a %.8g) to this.
-    void add_str_double(const char* str, double number);
 
-    // ensure capacity but keep pointer encapsulated
+    // ensure capcaity but keep pointer encapsulated
     inline void ensure(inT32 min_capacity) { ensure_cstr(min_capacity); }
 
   private:

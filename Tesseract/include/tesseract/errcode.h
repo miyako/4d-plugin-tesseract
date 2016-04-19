@@ -53,7 +53,7 @@ enum TessErrorLogCode {
 #define LOC_DOC_BLK_REJ   22
 #define LOC_WRITE_RESULTS 23
 #define LOC_ADAPTIVE    24
-/* DON'T DEFINE ANY LOCATION > 31 !!! */
+/* DONT DEFINE ANY LOCATION > 31 !!! */
 
 /* Sub locatation determines whether pass2 was in normal mode or fix xht mode*/
 #define SUBLOC_NORM     0
@@ -81,29 +81,21 @@ class TESS_API ERRCODE {           // error handler class
 
 const ERRCODE ASSERT_FAILED = "Assert failed";
 
-#define ASSERT_HOST(x) if (!(x))                                        \
-  {                                                                     \
-    ASSERT_FAILED.error(#x, ABORT, "in file %s, line %d",               \
-                        __FILE__, __LINE__);                            \
-  }
+#define ASSERT_HOST(x) if (!(x))										\
+{																			\
+	ASSERT_FAILED.error(#x,ABORT,"in file %s, line %d",		\
+		__FILE__,__LINE__);											\
+}
 
-#ifdef _MSC_VER
-#define ASSERT_HOST_MSG(x, msg, ...) if (!(x))                            \
-  {                                                                     \
-    tprintf(msg);                                                       \
-    ASSERT_FAILED.error(#x, ABORT, "in file %s, line %d",               \
-                        __FILE__, __LINE__);                            \
-  }
-#else
-#define ASSERT_HOST_MSG(x, msg...) if (!(x))                            \
-  {                                                                     \
-    tprintf(msg);                                                       \
-    ASSERT_FAILED.error(#x, ABORT, "in file %s, line %d",               \
-                        __FILE__, __LINE__);                            \
-  }
-#endif
-
-void signal_exit(int signal_code);
+void signal_exit(                 //
+                 int signal_code  //Signal which
+                );
+extern "C"
+{
+  void err_exit();
+                                 //The real signal
+  void signal_termination_handler(int sig);
+};
 
 void set_global_loc_code(int loc_code);
 

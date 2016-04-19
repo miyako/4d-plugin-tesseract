@@ -33,7 +33,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -136,8 +136,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>4D Plugin API;..\4D Plugin API\Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>4D Plugin API;..\4D Plugin API\Classes;..\include;..\include\leptonica;..\include\tesseract;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBLEPT_IMPORTS;WINDOWS32;_LIB;_OPEN_BINARY;HAVE_IO_H;HAVE_FCNTL_H;HAVE_STDARG_H;HAVE_BASETSD_H;HAVE_STDINT_H;HAVE_SYS_TYPES_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
@@ -155,12 +155,14 @@
       <TargetMachine>MachineX86</TargetMachine>
       <EntryPointSymbol>
       </EntryPointSymbol>
+      <AdditionalLibraryDirectories>..\lib\windows</AdditionalLibraryDirectories>
+      <AdditionalDependencies>liblept.1.69.lib;libz.1.2.7.lib;libjpeg.8d.lib;libpng.1.5.13.lib;libtesseract.3.2.2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>4D Plugin API;..\4D Plugin API\Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN64;WIN32;NDEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>4D Plugin API;..\4D Plugin API\Classes;..\include;..\include\leptonica;..\include\tesseract;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_WIN64;NDEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBLEPT_IMPORTS;WINDOWS32;WINDOWS64;_LIB;_OPEN_BINARY;HAVE_IO_H;HAVE_FCNTL_H;HAVE_STDARG_H;HAVE_BASETSD_H;HAVE_STDINT_H;HAVE_SYS_TYPES_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
@@ -177,6 +179,8 @@
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalLibraryDirectories>..\lib\windows64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>liblept.1.69.lib;libz.1.2.7.lib;libjpeg.8d.lib;libpng.1.5.13.lib;libtesseract.3.2.2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

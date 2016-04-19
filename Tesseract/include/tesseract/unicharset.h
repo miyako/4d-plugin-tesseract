@@ -21,23 +21,11 @@
 #define TESSERACT_CCUTIL_UNICHARSET_H__
 
 #include "errcode.h"
-#include "genericvector.h"
 #include "helpers.h"
-#include "serialis.h"
 #include "strngs.h"
 #include "tesscallback.h"
 #include "unichar.h"
 #include "unicharmap.h"
-
-// Enum holding special values of unichar_id. Every unicharset has these.
-// Warning! Keep in sync with kSpecialUnicharCodes.
-enum SpecialUnicharCodes {
-  UNICHAR_SPACE,
-  UNICHAR_JOINED,
-  UNICHAR_BROKEN,
-
-  SPECIAL_UNICHAR_CODES_COUNT
-};
 
 class CHAR_FRAGMENT {
  public:
@@ -143,9 +131,6 @@ class UNICHARSET {
   // by only few font families (eg. Wyld, Adobe Caslon Pro).
   static const char* kCustomLigatures[][2];
 
-  // List of strings for the SpecialUnicharCodes. Keep in sync with the enum.
-  static const char* kSpecialUnicharCodes[SPECIAL_UNICHAR_CODES_COUNT];
-
   // ICU 2.0 UCharDirection enum (from third_party/icu/include/unicode/uchar.h)
   enum Direction {
       U_LEFT_TO_RIGHT               = 0,
@@ -177,18 +162,17 @@ class UNICHARSET {
 
   // Return the UNICHAR_ID of a given unichar representation within the
   // UNICHARSET.
-  UNICHAR_ID unichar_to_id(const char* const unichar_repr) const;
+  const UNICHAR_ID unichar_to_id(const char* const unichar_repr) const;
 
   // Return the UNICHAR_ID of a given unichar representation within the
   // UNICHARSET. Only the first length characters from unichar_repr are used.
-  UNICHAR_ID unichar_to_id(const char* const unichar_repr,
+  const UNICHAR_ID unichar_to_id(const char* const unichar_repr,
                                  int length) const;
 
   // Return the minimum number of bytes that matches a legal UNICHAR_ID,
-  // while leaving the rest of the string encodable. Returns 0 if the
-  // beginning of the string is not encodable.
-  // WARNING: this function now encodes the whole string for precision.
-  // Use encode_string in preference to repeatedly calling step.
+  // while leaving a legal UNICHAR_ID afterwards. In other words, if there
+  // is both a short and a long match to the string, return the length that
+  // ensures there is a legal match after it.
   int step(const char* str) const;
 
   // Return whether the given UTF-8 string is encodable with this UNICHARSET.
@@ -196,32 +180,15 @@ class UNICHARSET {
   // into the second (return) argument.
   bool encodable_string(const char *str, int *first_bad_position) const;
 
-  // Encodes the given UTF-8 string with this UNICHARSET.
-  // Any part of the string that cannot be encoded (because the utf8 can't
-  // be broken up into pieces that are in the unicharset) then:
-  // if give_up_on_failure, stops and returns a partial encoding,
-  // else continues and inserts an INVALID_UNICHAR_ID in the returned encoding.
-  // Returns true if the encoding succeeds completely, false if there is at
-  // least one failure.
-  // If lengths is not NULL, then it is filled with the corresponding
-  // byte length of each encoded UNICHAR_ID.
-  // If encoded_length is not NULL then on return it contains the length of
-  // str that was encoded. (if give_up_on_failure the location of the first
-  // failure, otherwise strlen(str).)
-  bool encode_string(const char* str, bool give_up_on_failure,
-                     GenericVector<UNICHAR_ID>* encoding,
-                     GenericVector<char>* lengths,
-                     int* encoded_length) const;
-
   // Return the unichar representation corresponding to the given UNICHAR_ID
   // within the UNICHARSET.
-  const char* id_to_unichar(UNICHAR_ID id) const;
+  const char* const id_to_unichar(UNICHAR_ID id) const;
 
   // Return the UTF8 representation corresponding to the given UNICHAR_ID after
   // resolving any private encodings internal to Tesseract. This method is
-  // preferable to id_to_unichar for outputting text that will be visible to
+  // preferrable to id_to_unichar for outputting text that will be visible to
   // external applications.
-  const char* id_to_unichar_ext(UNICHAR_ID id) const;
+  const char* const id_to_unichar_ext(UNICHAR_ID id) const;
 
   // Return a STRING that reformats the utf8 str into the str followed
   // by its hex unicodes.
@@ -313,22 +280,7 @@ class UNICHARSET {
 
   // Saves the content of the UNICHARSET to the given file.
   // Returns true if the operation is successful.
-  bool save_to_file(FILE *file) const {
-    STRING str;
-    if (!save_to_string(&str)) return false;
-    if (fwrite(&str[0], str.length(), 1, file) != 1) return false;
-    return true;
-  }
-  bool save_to_file(tesseract::TFile *file) const {
-    STRING str;
-    if (!save_to_string(&str)) return false;
-    if (file->FWrite(&str[0], str.length(), 1) != 1) return false;
-    return true;
-  }
-
-  // Saves the content of the UNICHARSET to the given STRING.
-  // Returns true if the operation is successful.
-  bool save_to_string(STRING *str) const;
+  bool save_to_file(FILE *file) const;
 
   // Load a unicharset from a unicharset file that has been loaded into
   // the given memory buffer.
@@ -359,8 +311,6 @@ class UNICHARSET {
   // Returns true if the operation is successful.
   bool load_from_file(FILE *file, bool skip_fragments);
   bool load_from_file(FILE *file) { return load_from_file(file, false); }
-  bool load_from_file(tesseract::TFile *file, bool skip_fragments);
-
 
   // Sets up internal data after loading the file, based on the char
   // properties. Called from load_from_file, but also needs to be run
@@ -376,14 +326,11 @@ class UNICHARSET {
   // Set a whitelist and/or blacklist of characters to recognize.
   // An empty or NULL whitelist enables everything (minus any blacklist).
   // An empty or NULL blacklist disables nothing.
-  // An empty or NULL unblacklist has no effect.
   // The blacklist overrides the whitelist.
-  // The unblacklist overrides the blacklist.
   // Each list is a string of utf8 character strings. Boundaries between
   // unicharset units are worked out automatically, and characters not in
   // the unicharset are silently ignored.
-  void set_black_and_whitelist(const char* blacklist, const char* whitelist,
-                               const char* unblacklist);
+  void set_black_and_whitelist(const char* blacklist, const char* whitelist);
 
   // Set the isalpha property of the given unichar to the given value.
   void set_isalpha(UNICHAR_ID unichar_id, bool value) {
@@ -439,11 +386,7 @@ class UNICHARSET {
   // Record normalized version of unichar with the given unichar_id.
   void set_normed(UNICHAR_ID unichar_id, const char* normed) {
     unichars[unichar_id].properties.normed = normed;
-    unichars[unichar_id].properties.normed_ids.truncate(0);
   }
-  // Sets the normed_ids vector from the normed string. normed_ids is not
-  // stored in the file, and needs to be set when the UNICHARSET is loaded.
-  void set_normed_ids(UNICHAR_ID unichar_id);
 
   // Return the isalpha property of the given unichar.
   bool get_isalpha(UNICHAR_ID unichar_id) const {
@@ -500,25 +443,15 @@ class UNICHARSET {
   // Sets all the properties for this unicharset given a src_unicharset with
   // everything set. The unicharsets don't have to be the same, and graphemes
   // are correctly accounted for.
-  void SetPropertiesFromOther(const UNICHARSET& src) {
-    PartialSetPropertiesFromOther(0, src);
-  }
-  // Sets properties from Other, starting only at the given index.
-  void PartialSetPropertiesFromOther(int start_index, const UNICHARSET& src);
+  void SetPropertiesFromOther(const UNICHARSET& src);
   // Expands the tops and bottoms and widths for this unicharset given a
   // src_unicharset with ranges in it. The unicharsets don't have to be the
   // same, and graphemes are correctly accounted for.
   void ExpandRangesFromOther(const UNICHARSET& src);
-  // Makes this a copy of src. Clears this completely first, so the automattic
-  // ids will not be present in this if not in src.
-  void CopyFrom(const UNICHARSET& src);
   // For each id in src, if it does not occur in this, add it, as in
   // SetPropertiesFromOther, otherwise expand the ranges, as in
   // ExpandRangesFromOther.
   void AppendOtherUnicharset(const UNICHARSET& src);
-  // Returns true if the acceptable ranges of the tops of the characters do
-  // not overlap, making their x-height calculations distinct.
-  bool SizesDistinct(UNICHAR_ID id1, UNICHAR_ID id2) const;
   // Returns the min and max bottom and top of the given unichar in
   // baseline-normalized coordinates, ie, where the baseline is
   // kBlnBaselineOffset and the meanline is kBlnBaselineOffset + kBlnXHeight
@@ -549,60 +482,68 @@ class UNICHARSET {
     unichars[unichar_id].properties.max_top =
         static_cast<uinT8>(ClipToRange(max_top, 0, MAX_UINT8));
   }
-  // Returns the width stats (as mean, sd) of the given unichar relative to the
-  // median advance of all characters in the character set.
-  void get_width_stats(UNICHAR_ID unichar_id,
-                       float* width, float* width_sd) const {
+  // Returns the width range of the given unichar in baseline-normalized
+  // coordinates, ie, where the baseline is kBlnBaselineOffset and the
+  // meanline is kBlnBaselineOffset + kBlnXHeight.
+  // (See normalis.h for the definitions).
+  void get_width_range(UNICHAR_ID unichar_id,
+                       int* min_width, int* max_width) const {
     if (INVALID_UNICHAR_ID == unichar_id) {
-      *width = 0.0f;
-      *width_sd = 0.0f;;
+      *min_width = 0;
+      *max_width = 256;  // kBlnCellHeight;
       return;
     }
     ASSERT_HOST(contains_unichar_id(unichar_id));
-    *width = unichars[unichar_id].properties.width;
-    *width_sd = unichars[unichar_id].properties.width_sd;
+    *min_width = unichars[unichar_id].properties.min_width;
+    *max_width = unichars[unichar_id].properties.max_width;
   }
-  void set_width_stats(UNICHAR_ID unichar_id, float width, float width_sd) {
-    unichars[unichar_id].properties.width = width;
-    unichars[unichar_id].properties.width_sd = width_sd;
+  void set_width_range(UNICHAR_ID unichar_id, int min_width, int max_width) {
+    unichars[unichar_id].properties.min_width =
+        static_cast<inT16>(ClipToRange(min_width, 0, MAX_INT16));
+    unichars[unichar_id].properties.max_width =
+        static_cast<inT16>(ClipToRange(max_width, 0, MAX_INT16));
   }
-  // Returns the stats of the x-bearing (as mean, sd) of the given unichar
-  // relative to the median advance of all characters in the character set.
-  void get_bearing_stats(UNICHAR_ID unichar_id,
-                         float* bearing, float* bearing_sd) const {
+  // Returns the range of the x-bearing of the given unichar in
+  // baseline-normalized coordinates, ie, where the baseline is
+  // kBlnBaselineOffset and the meanline is kBlnBaselineOffset + kBlnXHeight.
+  // (See normalis.h for the definitions).
+  void get_bearing_range(UNICHAR_ID unichar_id,
+                         int* min_bearing, int* max_bearing) const {
     if (INVALID_UNICHAR_ID == unichar_id) {
-      *bearing = *bearing_sd = 0.0f;
+      *min_bearing = *max_bearing = 0;
       return;
     }
     ASSERT_HOST(contains_unichar_id(unichar_id));
-    *bearing = unichars[unichar_id].properties.bearing;
-    *bearing_sd = unichars[unichar_id].properties.bearing_sd;
+    *min_bearing = unichars[unichar_id].properties.min_bearing;
+    *max_bearing = unichars[unichar_id].properties.max_bearing;
   }
-  void set_bearing_stats(UNICHAR_ID unichar_id,
-                         float bearing, float bearing_sd) {
-    unichars[unichar_id].properties.bearing = bearing;
-    unichars[unichar_id].properties.bearing_sd = bearing_sd;
+  void set_bearing_range(UNICHAR_ID unichar_id,
+                         int min_bearing, int max_bearing) {
+    unichars[unichar_id].properties.min_bearing =
+        static_cast<inT16>(ClipToRange(min_bearing, 0, MAX_INT16));
+    unichars[unichar_id].properties.max_bearing =
+        static_cast<inT16>(ClipToRange(max_bearing, 0, MAX_INT16));
   }
-  // Returns the stats of the x-advance of the given unichar (as mean, sd)
-  // relative to the median advance of all characters in the character set.
-  void get_advance_stats(UNICHAR_ID unichar_id,
-                         float* advance, float* advance_sd) const {
+  // Returns the range of the x-advance of the given unichar in
+  // baseline-normalized coordinates, ie, where the baseline is
+  // kBlnBaselineOffset and the meanline is kBlnBaselineOffset + kBlnXHeight.
+  // (See normalis.h for the definitions).
+  void get_advance_range(UNICHAR_ID unichar_id,
+                         int* min_advance, int* max_advance) const {
     if (INVALID_UNICHAR_ID == unichar_id) {
-      *advance = *advance_sd = 0;
+      *min_advance = *max_advance = 0;
       return;
     }
     ASSERT_HOST(contains_unichar_id(unichar_id));
-    *advance = unichars[unichar_id].properties.advance;
-    *advance_sd = unichars[unichar_id].properties.advance_sd;
+    *min_advance = unichars[unichar_id].properties.min_advance;
+    *max_advance = unichars[unichar_id].properties.max_advance;
   }
-  void set_advance_stats(UNICHAR_ID unichar_id,
-                         float advance, float advance_sd) {
-    unichars[unichar_id].properties.advance = advance;
-    unichars[unichar_id].properties.advance_sd = advance_sd;
-  }
-  // Returns true if the font metrics properties are empty.
-  bool PropertiesIncomplete(UNICHAR_ID unichar_id) const {
-    return unichars[unichar_id].properties.AnyRangeEmpty();
+  void set_advance_range(UNICHAR_ID unichar_id,
+                         int min_advance, int max_advance) {
+    unichars[unichar_id].properties.min_advance =
+        static_cast<inT16>(ClipToRange(min_advance, 0, MAX_INT16));
+    unichars[unichar_id].properties.max_advance =
+        static_cast<inT16>(ClipToRange(max_advance, 0, MAX_INT16));
   }
 
   // Return the script name of the given unichar.
@@ -663,19 +604,6 @@ class UNICHARSET {
     if (unichars[unichar_id].properties.isupper) return unichar_id;
     return unichars[unichar_id].properties.other_case;
   }
-
-  // Returns true if this UNICHARSET has the special codes in
-  // SpecialUnicharCodes available. If false then there are normal unichars
-  // at these codes and they should not be used.
-  bool has_special_codes() const {
-    return get_fragment(UNICHAR_BROKEN) != NULL &&
-        strcmp(id_to_unichar(UNICHAR_BROKEN),
-               kSpecialUnicharCodes[UNICHAR_BROKEN]) == 0;
-  }
-
-  // Returns true if there are any repeated unicodes in the normalized
-  // text of any unichar-id in the unicharset.
-  bool AnyRepeatedUnicodes() const;
 
   // Return a pointer to the CHAR_FRAGMENT class if the given
   // unichar id represents a character fragment.
@@ -774,14 +702,7 @@ class UNICHARSET {
 
   // Returns normalized version of unichar with the given unichar_id.
   const char *get_normed_unichar(UNICHAR_ID unichar_id) const {
-    if (unichar_id == UNICHAR_SPACE && has_special_codes()) return " ";
     return unichars[unichar_id].properties.normed.string();
-  }
-  // Returns a vector of UNICHAR_IDs that represent the ids of the normalized
-  // version of the given id. There may be more than one UNICHAR_ID in the
-  // vector if unichar_id represents a ligature.
-  const GenericVector<UNICHAR_ID>& normed_ids(UNICHAR_ID unichar_id) const {
-    return unichars[unichar_id].properties.normed_ids;
   }
 
   // Return the script name of the given unichar representation.
@@ -861,8 +782,8 @@ class UNICHARSET {
     void SetRangesOpen();
     // Sets all ranges to empty. Used before expanding with font-based data.
     void SetRangesEmpty();
-    // Returns true if any of the top/bottom/width/bearing/advance ranges/stats
-    // is emtpy.
+    // Returns true if any of the top/bottom/width/bearing/advance ranges is
+    // emtpy.
     bool AnyRangeEmpty() const;
     // Expands the ranges with the ranges from the src properties.
     void ExpandRangesFrom(const UNICHAR_PROPERTIES& src);
@@ -884,14 +805,14 @@ class UNICHARSET {
     uinT8 max_bottom;
     uinT8 min_top;
     uinT8 max_top;
-    // Statstics of the widths of bounding box, relative to the median advance.
-    float width;
-    float width_sd;
-    // Stats of the x-bearing and advance, also relative to the median advance.
-    float bearing;
-    float bearing_sd;
-    float advance;
-    float advance_sd;
+    // Limits on the widths of bounding box, also in baseline-normalized coords.
+    inT16 min_width;
+    inT16 max_width;
+    // Limits on the x-bearing and advance, also in baseline-normalized coords.
+    inT16 min_bearing;
+    inT16 max_bearing;
+    inT16 min_advance;
+    inT16 max_advance;
     int   script_id;
     UNICHAR_ID other_case;  // id of the corresponding upper/lower case unichar
     Direction direction;  // direction of this unichar
@@ -902,10 +823,6 @@ class UNICHARSET {
     // '[open paren]', 'd', 'r', 'o', 'w', '[close paren]' not
     // '[close paren]', 'd', 'r', 'o', 'w', '[open paren]'.
     UNICHAR_ID mirror;
-    // A string of unichar_ids that represent the corresponding normed string.
-    // For awkward characters like em-dash, this gives hyphen.
-    // For ligatures, this gives the string of normal unichars.
-    GenericVector<UNICHAR_ID> normed_ids;
     STRING normed;  // normalized version of this unichar
     // Contains meta information about the fragment if a unichar represents
     // a fragment of a character, otherwise should be set to NULL.
@@ -918,24 +835,6 @@ class UNICHARSET {
     char representation[UNICHAR_LEN + 1];
     UNICHAR_PROPERTIES properties;
   };
-
-  // Internal recursive version of encode_string above.
-  // str is the start of the whole string.
-  // str_index is the current position in str.
-  // str_length is the length of str.
-  // encoding is a working encoding of str.
-  // lengths is a working set of lengths of each element of encoding.
-  // best_total_length is the longest length of str that has been successfully
-  // encoded so far.
-  // On return:
-  // best_encoding contains the encoding that used the longest part of str.
-  // best_lengths (may be null) contains the lengths of best_encoding.
-  void encode_string(const char* str, int str_index, int str_length,
-                     GenericVector<UNICHAR_ID>* encoding,
-                     GenericVector<char>* lengths,
-                     int* best_total_length,
-                     GenericVector<UNICHAR_ID>* best_encoding,
-                     GenericVector<char>* best_lengths) const;
 
   // Gets the properties for a grapheme string, combining properties for
   // multiple characters in a meaningful way where possible.

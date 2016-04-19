@@ -65,7 +65,11 @@ struct Sel
     l_int32     **data;        /* {0,1,2}; data[i][j] in [row][col] order  */
     char         *name;        /* used to find sel by name                 */
 };
+#ifdef WIN32
 typedef struct Sel SEL;
+#else
+typedef struct Sel _SEL;
+#endif
 
 struct Sela
 {
@@ -126,7 +130,7 @@ enum {
 
 /*-------------------------------------------------------------------------*
  *         Direction flags for grayscale morphology, granulometry,         *
- *                 composable Sels, convolution, etc.                      *
+ *                   composable Sels, and convolution                      *
  *-------------------------------------------------------------------------*/
 enum {
     L_HORIZ            = 1,

@@ -24,9 +24,8 @@
 
 #include "platform.h"
 #include "ltrresultiterator.h"
+#include "genericvector.h"
 
-template <typename T> class GenericVector;
-template <typename T> class GenericVectorEqEq;
 class BLOB_CHOICE_IT;
 class WERD_RES;
 class STRING;
@@ -46,8 +45,8 @@ class TESS_API ResultIterator : public LTRResultIterator {
   virtual ~ResultIterator() {}
 
   // ============= Moving around within the page ============.
-  /**
-   * Moves the iterator to point to the start of the page to begin
+  /** 
+   * Moves the iterator to point to the start of the page to begin 
    * an iteration.
    */
   virtual void Begin();
@@ -89,7 +88,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    * object at the given level. Use delete [] to free after use.
   */
   virtual char* GetUTF8Text(PageIteratorLevel level) const;
-
+  virtual char* GetUTF8Text(PageIteratorLevel level, void (*_PA_YieldAbsolute)(void)) const;
   /**
    * Return whether the current paragraph's dominant reading direction
    * is left-to-right (as opposed to right-to-left).
@@ -181,7 +180,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
   void MoveToLogicalStartOfTextline();
 
   /**
-   * Precondition: current_paragraph_is_ltr_ and in_minor_direction_
+   * Precondition: current_paragraph_is_ltr_ and in_minor_direction_ 
    * are set.
    */
   void MoveToLogicalStartOfWord();
@@ -200,7 +199,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
 
   /** Appends the current word in reading order to the given buffer.*/
   void AppendUTF8WordText(STRING *text) const;
-
+  void AppendUTF8WordText(STRING *text, void (*_PA_YieldAbsolute)(void)) const;
   /**
    * Appends the text of the current text line, *assuming this iterator is
    * positioned at the beginning of the text line*  This function
@@ -209,7 +208,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    * If the textline ends a paragraph, it gets a second terminal newline.
    */
   void IterateAndAppendUTF8TextlineText(STRING *text);
-
+  void IterateAndAppendUTF8TextlineText(STRING *text, void (*_PA_YieldAbsolute)(void));
   /**
    * Appends the text of the current paragraph in reading order
    * to the given buffer.
@@ -217,7 +216,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    * paragraph gets an extra newline at the end.
    */
   void AppendUTF8ParagraphText(STRING *text) const;
-
+  void AppendUTF8ParagraphText(STRING *text, void (*_PA_YieldAbsolute)(void)) const;
   /** Returns whether the bidi_debug flag is set to at least min_level. */
   bool BidiDebug(int min_level) const;
 
@@ -231,12 +230,6 @@ class TESS_API ResultIterator : public LTRResultIterator {
 
   /** Is the currently pointed-at character in a minor-direction sequence? */
   bool in_minor_direction_;
-
-  /**
-   * Should detected inter-word spaces be preserved, or "compressed" to a single
-   * space character (default behavior).
-   */
-  bool preserve_interword_spaces_;
 };
 
 }  // namespace tesseract.
