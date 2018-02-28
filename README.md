@@ -49,4 +49,4 @@ OCR SET TIMEOUT (timeout)
 
 Parameter|Type|Description
 ------------|------------|----
-timeout|LONGINT|
+timeout|LONGINT|default: ``15`` seconds
