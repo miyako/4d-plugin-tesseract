@@ -3,6 +3,8 @@
 
 4D implementation of Tesseract OCR 3.2.
 
+You can support more languages by adding files from https://github.com/tesseract-ocr/langdata.
+
 ### Platform
 
 | carbon | cocoa | win32 | win64 |
@@ -17,18 +19,34 @@
 
 [1.1](https://github.com/miyako/4d-plugin-tesseract/releases/tag/1.1)
 
-Commands
----
+## Syntax
 
-```c
-// --- OCR
-OCR Set language folder
-OCR Get timeout
-OCR SET TIMEOUT
-OCR Read image text
-OCR Get language folder
+```
+path:=OCR Get language folder
+success:=OCR Set language folder (path)
 ```
 
-You can support more languages by adding files from https://github.com/tesseract-ocr/langdata.
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+success|LONGINT|
 
+```
+success:=OCR Read image text (path;text;language)
+```
 
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+text|TEXT|
+language|TEXT|
+success|LONGINT|
+
+```
+timeout:=OCR Get timeout
+OCR SET TIMEOUT (timeout)
+```
+
+Parameter|Type|Description
+------------|------------|----
+timeout|LONGINT|
